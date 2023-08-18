@@ -8,7 +8,7 @@ script:
   native:
     - "-p<%= slurm_partition %>"
     - "-A<%= slurm_account %>"
-    - "<%= sbatch_options %>"
+    - "--reservation<%= slurm_reservation %>"
     - "-N1"
     - "-c<%= num_cores %>"
     - "--mem=<% if mem == "" %>1024<% else %><%= mem %><% end %>"
